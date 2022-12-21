@@ -13,6 +13,11 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy: boolean = true;
 const finished: boolean = false;
 const goal: number = 3;
+
+// css variable
+const skillColor = 'navy';
+const fontWeight = 'bold';
+const textCase = 'uppercase';
 ---
 
 <html lang="en">
@@ -21,6 +26,17 @@ const goal: number = 3;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<style define:vars={{skillColor, fontWeight, textCase}}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+			.skill {
+				color: var(--skillColor);
+				font-weight: var(--fontWeight);
+				text-transform: var(--textCase);
+			}
+		</style>
 		<title>{pagetitle}</title>
 	</head>
 	<body>
@@ -44,7 +60,7 @@ const goal: number = 3;
 		<p>My skills are:</p>
 		<ul>
 			{skills.map((skill) => (
-				<li>{skill}</li>
+				<li class="skill">{skill}</li>
 			))}
 		</ul>
 
