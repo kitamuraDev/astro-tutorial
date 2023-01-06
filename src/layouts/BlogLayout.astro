@@ -1,0 +1,17 @@
+---
+interface Props {
+  frontmatter: {
+    title: string;
+    author: string;
+    pubDate: string;
+    description: string;
+  }
+}
+const { frontmatter } = Astro.props;
+---
+
+<h1>{frontmatter.title}</h1>
+<p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+<p><em>{frontmatter.description}</em></p>
+<p>whitten by {frontmatter.author}</p>
+<slot />
