@@ -75,3 +75,13 @@ h1 {
   margin-bottom: 10px;
   background-color: #ff9776;
 }
+
+/* dark style */
+.dark body {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
