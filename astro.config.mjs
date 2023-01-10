@@ -7,4 +7,5 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   integrations: [preact()],
   site: "https://kitamuradev.github.io",
+  base: "/astro-tutorial",
 });
